@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form 
+        action="http://localhost:8080/api/users/login" 
+        method="post"
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1rem; border: 1px solid grey;"
+    >
+        <input 
+            type="text" 
+            name="username"
+            style="margin: 1rem;"
+        >
+        <input 
+            type="text" 
+            name="password"
+            style="margin: 1rem;"
+        >
+        <button 
+            type="submit"
+            style="margin: 1rem;"
+        >
+            Iniciar Sesion
+        </button>
+    </form>
+    <form 
+        action="http://localhost:8080/api/users/6563e4c51c02b48f31887137/documents" 
+        method="post" 
+        enctype="multipart/form-data"
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1rem; border: 1px solid grey;"
+    >
+        <label for="profile">
+            Imagen de Perfil
+            <input type="file" name="profile" style="margin: 1rem;">
+        </label>
+        <label for="product">
+            Imagen del Producto
+            <input type="file" name="products" style="margin: 1rem;">
+        </label>
+        <label for="Identificacion">
+            Imagen de su Identificacion
+            <input type="file" name="Identificacion" style="margin: 1rem;">
+        </label>
+        <label for="Comprobante de domicilio">
+            Comprobante de domicilio
+            <input type="file" name="Comprobante de domicilio" style="margin: 1rem;">
+        </label>
+        <label for="Comprobante de estado de cuenta">
+            Comprobante de estado de cuenta
+            <input type="file" name="Comprobante de estado de cuenta" style="margin: 1rem;">
+        </label>
+        <button type="submit" style="margin: 1rem;">Enviar</button>
+    </form>
+</body>
+</html>
