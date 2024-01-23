@@ -32,7 +32,7 @@ export const generateToken = (user, time)=> {
     return token;
 };
 
-// El siguiente codigo corresponde al mock de productos
+// El siguiente codigo corresponde al mock deproductos
 
 export const mockProduct = () => {
     return {
