@@ -34,7 +34,7 @@ const corsOptions = {
     origin: corsURL,
     credentials: true
 }
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(errorHandler);
 app.use(addLogger);
 
