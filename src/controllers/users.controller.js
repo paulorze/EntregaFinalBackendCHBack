@@ -43,7 +43,7 @@ const login = async (req, res) => {
         delete user.last_name;
         await updateLastConnection(email);
         const accessToken = generateToken(user, '24h');
-        res.cookie('session', accessToken, {maxAge: 60*60*1000, httpOnly: true, sameSite: 'None'}).send({ status: 'success', accessToken });
+        res.cookie('session', accessToken, {maxAge: 60*60*1000, httpOnly: true, sameSite: 'None', secure: true}).send({ status: 'success', accessToken });
     } catch (e) {
         switch (e.code) {
             case errorsEnum.DATABASE_ERROR:
