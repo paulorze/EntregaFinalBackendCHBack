@@ -53,4 +53,5 @@ app.get('/loggerTest', (req, res) => {
     req.logger.debug('Testing the logger for: debug');
 });
 
-app.listen(8080, ()=> console.log('Server Running'));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, ()=> console.log('Server Running'));
