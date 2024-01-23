@@ -16,6 +16,8 @@ const passwordNodemailer = process.env.PASSWORD_NODEMAILER;
 
 const secretKeyStripe = process.env.SECRET_KEY_STRIPE;
 
+const corsURL = process.env.CORS_URL;
+
 export {
     adminKey,
     premiumKey,
@@ -23,5 +25,6 @@ export {
     privateKeyJWT,
     userNodemailer,
     passwordNodemailer,
-    secretKeyStripe
+    secretKeyStripe,
+    corsURL
 };

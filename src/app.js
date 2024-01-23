@@ -14,6 +14,7 @@ import MessagesRouter from './routes/messages.router.js';
 import TicketsRouter from './routes/tickets.router.js';
 import { swaggerSpecs } from './config/swagger.config.js';
 import PaymentsRouter from './routes/payments.router.js';
+import { corsURL } from './config/config.js';
 
 const cartsRouter = new CartsRouter();
 const messagesRouter = new MessagesRouter();
@@ -30,7 +31,7 @@ app.use(cookieParser());
 initializePassport();
 app.use(passport.initialize());
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: corsURL,
     credentials: true
 }
 app.use(cors(corsOptions));
